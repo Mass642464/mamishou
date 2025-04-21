@@ -17,13 +17,22 @@ header
   
 }
 .head
-{
+{   position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-around;
   border-bottom: 1px solid rgba(255, 255, 255, 0.094); /* Meilleur rendu */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.299); /* Ombre plus naturelle */
 }
 .logo
+{
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 20px;
+    color: white;
+}
+ .head .menu_head ul
 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
@@ -115,8 +124,20 @@ margin: 30px;
     font-size: 16px;
     font-weight: bold;
 }
-
-@media screen {
-
-    
+body
+{
+    height: 1000vh;
+    background-color: white;
 }
+
+
+/*affichae sur des tablette */
+@media only screen and (max-width: 800px) {
+    .head .menu_head ul
+    {
+        display: none;
+    } 
+   .logo{
+    
+   }
+   }
