@@ -9,41 +9,56 @@
 <body>
     <header>
         <div class="head">
-            <p class="logo">MSHU</p>
-            <div class="menu_head">
-             <ul>
-                <li><a href=""> Accueil</a></li>
-                <li>
-                    <a href=""> Boutique</a>
-                    <ul>
-
-                        <li><a href="">Tissus</a></li>
-                        <li><a href="">Cosmétiques</a></li>
-                        <li><a href="">Bijoux</a></li>
-                        <li><a href="">Prêt-à-porter</a></li>
-                    </ul>
-                
-                </li>
-                 <li>
-                    <a href=""> Service</a>
-                   <ul>
-                        <li><a href="">Couture</a></li>
-                        <li><a href=""> Pédicure</a></li>
-                        <li><a href=""> Manucure</a></li>
-                        <li><a href="">Machine Damina</a></li>
-                  </ul>
-                </li>
-                <li><a href="">Contact</a></li>
-             </ul>
-            </div>
-            <div class="icon_head">
+              <!-- BOUTON HAMBURGER -->
+            <button class="drawer-toggle" onclick="toggleDrawer()">☰</button>
+          <p class="logo">MSHU</p>
+      
+        
+          
+      
+          <!-- MENU -->
+          <div class="menu_head" id="drawerMenu">
+            <ul>
+              <li><a href="">Accueil</a></li>
+              <li>
+                <a href="">Boutique</a>
                 <ul>
-                    <li><a href="">🔍 </a></li>
-                    <li><a href="">❤️ </a></li>
-                    <li><a href="">🛒 </a></li>
-                    
-                 </ul> 
-            </div>
+                  <li><a href="">Tissus</a></li>
+                  <li><a href="">Cosmétiques</a></li>
+                  <li><a href="">Bijoux</a></li>
+                  <li><a href="">Prêt-à-porter</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">Service</a>
+                <ul>
+                  <li><a href="">Couture</a></li>
+                  <li><a href="">Pédicure</a></li>
+                  <li><a href="">Manucure</a></li>
+                  <li><a href="">Machine Damina</a></li>
+                </ul>
+              </li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Icônes -->
+          <div class="icon_head">
+            <ul>
+                <li>
+                    <button id="search-icon" class="search-button">
+                        🔍
+                    </button>
+                </li>
+               
+              <li><a href="">❤️</a></li>
+              <li><a href="">🛒</a></li>
+            </ul>
+          </div>
+          <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Rechercher..." />
+            <button>OK</button>
+        </div>
         </div>
         <div class="accrocheur" >
             <p>
@@ -51,7 +66,17 @@
             </p>
             <button>Voir nos services</button>
         </div>
-    </header>
+      </header>
+     
+    
+    
+      <script>
+        function toggleDrawer() {
+          const drawer = document.getElementById("drawerMenu");
+          drawer.classList.toggle("open");
+        }
+      </script>
+      
     <main>
         <section class="section1">
             <div>
@@ -67,5 +92,6 @@
             
         </section>
     </main>
+    
 </body>
 </html>
